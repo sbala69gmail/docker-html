@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+  - docker build -t sbala69/docker-example -f Dockerfile  .
+
+script:
+  - docker run sbala69/docker-example
